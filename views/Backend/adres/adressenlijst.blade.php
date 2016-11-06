@@ -26,8 +26,6 @@
                             <th>Emailadres</th>
                             <th>Huisadres</th>
                             <th>Postcode</th>
-                            <th>Gemaakt in</th>
-                            <th>Aangepast in</th>
                             <th data-sortable="false">Acties</th>
                         </tr>
                         </thead>
@@ -48,15 +46,9 @@
                                         {{$rows['Zip_code']}}
                                     </td>
                                     <td>
-                                    	{{$rows['Created_at']}}
-                                    </td>
-                                    <td>
-                                    	{{$rows['Edited_at']}}
-                                    </td>
-                                    <td>
                                         <div class="btn-group">
                                             <a href="Edit_adress.php?id={{$rows['ID']}}" class="btn btn-default btn-flat"><i class="fa fa-pencil"></i></a>
-                                            <a href="Delete_adress_action.php?id={{$rows['ID']}}&events_id={{$rows['events_id']}}" class="btn btn-danger btn-flat"><i class="fa fa-trash"></i></a>
+                                            <a href="Delete_adress_action.php?id={{$rows['ID']}}" class="btn btn-danger btn-flat"><i class="fa fa-trash"></i></a>
                                         </div>
                                     </td>
                                 </tr>
