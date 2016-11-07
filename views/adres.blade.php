@@ -7,13 +7,13 @@
                 </div>
                 <!-- /.box-header -->
                 <div class="box-body">
-                    <table class="data-table table table-bordered table-hover">
+                    <table class="data-table table table-bordered table-hover table-color">
                         <thead>
                         <tr>
-                            <th>Sorteer</th>
-                            <th>Emailadres</th>
-                            <th>Huisadres</th>
-                            <th>Postcode</th>
+                            <th class="table-header">Sorteer</th>
+                            <th class="table-header">Emailadres</th>
+                            <th class="table-header">Huisadres</th>
+                            <th class="table-header">Postcode</th>
                         </tr>
                         </thead>
                         <tbody>

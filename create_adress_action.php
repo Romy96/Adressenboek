@@ -18,16 +18,14 @@ $Zip = $_POST['Zip'];
 if (empty($naam) || empty($Email) || empty($Home) || empty($Zip)) {
 	$_SESSION['errors'][] = 'Er zijn sommige velden die nog niet ingevuld zijn';
 	header('Location: create_adress.php');
-	exit();
 }
 
 
-$sql = $db->prepare("SELECT * FROM adressen WHERE Name=? AND Email_adress=? AND Homea=_adress=? AND Zip_code=?");
+$sql = $db->prepare("SELECT * FROM adressen WHERE Name=? AND Email_adress=? AND Home_adress=? AND Zip_code=?");
 if ($sql->execute(array($naam, $Email, $Home, $Zip))) {
 	if ( $sql->rowCount() > 0 ) {
 		$_SESSION['errors'][] = 'Sorry. De gegevens die je ingevuld hebt bestaan al.';
 		header('Location: create_adress.php');
-		exit();
 	} 
 }
 
@@ -35,12 +33,11 @@ $sth = $db->prepare("INSERT INTO adressen (Name, Email_adress, Home_adress, Zip_
 if ($sth->execute(array($naam, $Email, $Home, $Zip))) {
 	$_SESSION['errors'][] = 'De gegevens zijn ingevuld en opgeslagen in de database.';
 	header('Location: Adressenlijst.php');
-	exit();
 }
 else
 {
 	$_SESSION['errors'][] = 'Er is iets fout gegaan in de database. Probeer het later nog eens.';
 	header('Location: create_adress.php');
-	exit();
 }
+
 ?>

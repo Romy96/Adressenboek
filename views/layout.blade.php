@@ -1,7 +1,6 @@
 <!doctype html>
 <html>
 <head>
-	<link href="css/style.css" rel="stylesheet">
 	<title>Adressenboek</title>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
@@ -9,6 +8,7 @@
 	<script src="https://use.fontawesome.com/bf8ab24a40.js"></script>
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/bootstrap-theme.min.css">
+  <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
 
@@ -22,7 +22,7 @@
       	<span class="right">{{ $_SESSION['userName'] }}</span>
       	<li><a href="Logout.php" class="navbar-left">Logout</a></li>
       @else
-      	<li><a href="Login.php" class="navbar-left">Login</a></li> 
+      	<li><a class="right" href="Login.php">Login</a></li> 
       @endif
     </ul>
   </div>
