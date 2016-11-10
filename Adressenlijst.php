@@ -4,6 +4,7 @@
  require_once 'inc/blade.php';
  require_once 'inc/user_helpers.php';
  require 'inc/dbconnection.php';
+ $errors = [];
 
 	//$id = mysqli_real_escape_string($db, $_GET['events_id']);
 
